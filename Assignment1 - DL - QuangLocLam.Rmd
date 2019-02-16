@@ -1,0 +1,97 @@
+---
+title: "Homework1"
+author: "Quang Loc Lam"
+date: "16 February 2019"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#ANSWERS FOR HOMEWORK 1
+
+The result I got from the original IMDB code:
+$loss
+[1] 0.3058591
+
+$acc
+[1] 0.87784
+
+###Use one or three hidden layers
+
+#When I use one hidden layer:
+$loss
+[1] 0.2803026
+
+$acc
+[1] 0.88744
+Validation is increased, accuracy is increased. It improves the model.
+
+#When I use three hidden layers:
+$loss
+[1] 0.3108989
+
+$acc
+[1] 0.87844
+Validation is decreased, accuracy is increased. 
+
+###Use more or fewer hidden units
+
+#Use fewer hidden units (decrease from 16 to 8):
+$loss
+[1] 0.2883873
+
+$acc
+[1] 0.88372
+Validation is increased. Accuracy is increased too. It improves the model.
+
+#Use fewer hidden units (decrease from 16 to 4):
+$loss
+[1] 0.2895627
+
+$acc
+[1] 0.8882
+Validation is increased. Accuracy is increased. It improves the model.
+
+#Use more hidden units (increase from 16 to 32)
+$loss
+[1] 0.3647905
+
+$acc
+[1] 0.86156
+Validation is decreased. Accuracy is decreased. It makes the model worse.
+
+#Use more hidden units (increase from 16 to 64)
+$loss
+[1] 0.4282952
+
+$acc
+[1] 0.84368
+Validation is decreased. Accuracy is decreased. It makes the model worse.
+
+### Use MSE loss function instead of binary_crossentropy loss function:
+$loss
+[1] 0.09737746
+
+$acc
+[1] 0.86892
+Validation is increased dramatically. Accuracy is decreased. 
+
+###Use the tanh activation instead of relu activation: 
+$loss
+[1] 0.3701294
+
+$acc
+[1] 0.8606
+Validation is decreased. Accuracy is decreased. It makes the model worse.
+
+###The best model I propose:
+I propose a model with "relu" activation, "mse" loss function, with 3 hidden layers and 5 hidden units:
+$loss
+[1] 0.08447455
+
+$acc
+[1] 0.89112
+
+Loss is smallest. Acc is highest. So this model has the best validity and the best accuracy. Therefore, this is the best model that I figure out.
