@@ -1,0 +1,116 @@
+---
+title: "Homework1"
+author: "Quang Loc Lam"
+date: "16 February 2019"
+output:
+  html_document:
+    df_print: paged
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#ANSWERS FOR HOMEWORK 1
+
+The result I got from the original IMDB review code:
+
+$loss
+[1] 0.3058591
+
+$acc
+[1] 0.87784
+
+
+###When I decrease number of hidden layers from 2 to 1:
+
+$loss
+[1] 0.2803026
+
+$acc
+[1] 0.88744
+
+I see that validation is increased and accuracy is increased. So it improves the model.
+
+###When I increase number of hidden layers from 2 to 3:
+
+$loss
+[1] 0.3108989
+
+$acc
+[1] 0.87844
+
+I see that validation is decreased but accuracy is increased. 
+
+###When I decrease number of hidden units from 16 to 8:
+
+$loss
+[1] 0.2883873
+
+$acc
+[1] 0.88372
+
+I see that validation is increased and accuracy is increased. So it improves the model.
+
+###When I decrease number of hidden units from 16 to 4:
+
+$loss
+[1] 0.2895627
+
+$acc
+[1] 0.8882
+
+I see that validation is increased and accuracy is increased. So it improves the model.
+
+###When I increase number of hidden units from 16 to 32:
+
+$loss
+[1] 0.3647905
+
+$acc
+[1] 0.86156
+
+I see that validation is decreased and accuracy is decreased. So it makes the model worse.
+
+###When I increase number of hidden units from 16 to 64:
+
+$loss
+[1] 0.4282952
+
+$acc
+[1] 0.84368
+
+I see that validation is decreased and accuracy is decreased. So it makes the model worse.
+
+###When I use MSE loss function instead of binary_crossentropy loss function:
+
+$loss
+[1] 0.09737746
+
+$acc
+[1] 0.86892
+
+I see that validation is increased dramatically and accuracy is decreased. 
+
+###When I use the tanh activation instead of relu activation: 
+
+$loss
+[1] 0.3701294
+
+$acc
+[1] 0.8606
+
+I see that validation is decreased and acuracy is decreased. So it makes the model worse.
+
+###The best model I propose:
+
+I propose a model with "relu" activation, "mse" loss function with 3 hidden layers and 5 hidden units. Following is the result of that model.
+
+$loss
+[1] 0.08447455
+
+$acc
+[1] 0.89112
+
+So this model has the highest validity and the highest accuracy among all models that I have run. Therefore, this is the best model that I figure out.
